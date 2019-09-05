@@ -1,0 +1,74 @@
+
+"//label[text()='Your Email']/following-sibling::div/input[@placeholder='Email address']"
+
+$x("//input[@placeholder='Password']")
+
+$x("//input[@placeholder='Re-type password']")
+
+//button/descendant::*[text()='${btnName} ???? same as always
+
+$x("//input[@placeholder='First Name']")
+
+
+$x("//input[@placeholder='Last Name']")
+
+
+$x("//span[text()='Single']/preceding-sibling::i")
+
+
+
+$x("//label[text()='I agree to Angle Terms of Service']/preceding-sibling::*")
+
+$x("//label[text()='I agree to Angle Terms of Service']/preceding-sibling::*")
+
+
+//button/descendant::*[text()='${btnName} ???? same as always
+
+
+
+$x("//input[@placeholder='Name on Card']")
+
+
+$x("//label[text()='Card Number']/following-sibling::div[contains(@class,'StripeElement')]")
+
+$x("//label[text()='Exp Date']/following-sibling::div[contains(@class,'StripeElement')]")
+
+
+$x("//label[text()='CVV']/following-sibling::div[contains(@class,'StripeElement')]")
+
+
+
+Click on COnitnue
+
+
+wait until PURCHASE AVAILABLE
+
+$x("//button/descendant::*[text()='Purchase']")
+
+
+waiting a lot more here :/
+
+
+>>>>>>>>>>>>>>> "Validation"
+
+$x("//div[@class='location']/span/span[text()='England']")
+
+"Two Hours Package"
+$x("//h3[text()='Two Hours Package']")
+
+click on the package:
+
+$x("//div[text()='Location']/following-sibling::div/span/span[text()='London']")
+
+$x("//div[text()='Duration of the session']/following-sibling::div[text()='2 hours']")
+
+$x("//div[text()='Date']/following-sibling::div")
+
+$x("//div[text()='Time']/following-sibling::div")
+
+$x("//div[text()='Special Requests']/following-sibling::div")
+
+
+$x("//div[text()='Want to receive more photos']/following-sibling::div")
+
+$x("//div[text()='Photographer']/following-sibling::div")
