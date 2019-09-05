@@ -13,7 +13,6 @@ Feature:
     And I select package 'Two Hours Package'
     And I click on 'Continue'
     And I click on 'Proceed to Payment'
-
 #    And Select a photographer
 
 
