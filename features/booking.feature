@@ -13,6 +13,15 @@ Feature:
     And I select package 'Two Hours Package'
     And I click on 'Continue'
     And I click on 'Proceed to Payment'
+    And I set an email address 'tester06@email.com'
+    And I set a password 'tester'
+    And I click on 'Continue'
+    And I insert First Name 'tester01'
+    And I insert Last Name 'testerlastname'
+    And I select Type of Tour 'Single'
+    And I select How did you hear about us 'Google'
+    And I select I Agree to Angle Terms of Service
+#    And I click on 'Continue'
 #    And Select a photographer
 
 
