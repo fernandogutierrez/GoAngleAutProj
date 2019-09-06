@@ -29,7 +29,8 @@ $x("//label[text()='I agree to Angle Terms of Service']/preceding-sibling::*")
 $x("//input[@placeholder='Name on Card']")
 
 
-$x("//label[text()='Card Number']/following-sibling::div[contains(@class,'StripeElement')]")
+$x("//label[text()='Card Number']/following-sibling::div[contains(@class,'StripeElement')]").click()
+browser.keys("424244242424") > not working at all is repeating letters
 
 $x("//label[text()='Exp Date']/following-sibling::div[contains(@class,'StripeElement')]")
 
