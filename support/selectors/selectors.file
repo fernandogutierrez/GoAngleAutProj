@@ -29,13 +29,16 @@ $x("//label[text()='I agree to Angle Terms of Service']/preceding-sibling::*")
 $x("//input[@placeholder='Name on Card']")
 
 
-$x("//label[text()='Card Number']/following-sibling::div[contains(@class,'StripeElement')]").click()
-browser.keys("424244242424") > not working at all is repeating letters
-
-$x("//label[text()='Exp Date']/following-sibling::div[contains(@class,'StripeElement')]")
+$("//label[text()='Card Number']/following-sibling::div[contains(@class,'StripeElement')]").click()
+'4242424242424242'.split("").forEach((c)=>{browser.keys(c)})
 
 
-$x("//label[text()='CVV']/following-sibling::div[contains(@class,'StripeElement')]")
+$("//label[text()='Exp Date']/following-sibling::div[contains(@class,'StripeElement')]").click()
+'05/25'.split("").forEach((c)=>{browser.keys(c)})
+
+
+$("//label[text()='CVV']/following-sibling::div[contains(@class,'StripeElement')]").click()
+'0525333'.split("").forEach((c)=>{browser.keys(c)})
 
 
 
@@ -52,22 +55,31 @@ waiting a lot more here :/
 
 >>>>>>>>>>>>>>> "Validation"
 
-$x("//div[@class='location']/span/span[text()='England']")
+$("//div[text()='Location']/following-sibling::div").getText()
+
+
 
 "Two Hours Package"
 $x("//h3[text()='Two Hours Package']")
 
 click on the package:
 
-$x("//div[text()='Location']/following-sibling::div/span/span[text()='London']")
+$("//div[text()='Location']/following-sibling::div").getText() > should be london
 
-$x("//div[text()='Duration of the session']/following-sibling::div[text()='2 hours']")
+$x("//div[text()='Duration of the session']/following-sibling::div")
 
-$x("//div[text()='Date']/following-sibling::div")
 
-$x("//div[text()='Time']/following-sibling::div")
+$("//div[text()='Date']/following-sibling::div").getText()
 
-$x("//div[text()='Special Requests']/following-sibling::div")
+ $("//div[text()='Time']/following-sibling::div").getText()
+
+$("//div[text()='Want to receive more photos']/following-sibling::div").getText()
+qw342
+$("//div[text()='Photographer']/following-sibling::div").getText()
+
+
+
+
 
 
 $x("//div[text()='Want to receive more photos']/following-sibling::div")

@@ -13,7 +13,7 @@ Feature:
     And I select package 'Two Hours Package'
     And I click on 'Continue'
     And I click on 'Proceed to Payment'
-    And I set an email address 'tester06@email.com'
+    And I set an email address 'tester19@email.com'
     And I set a password 'tester'
     And I click on 'Continue'
     And I insert First Name 'tester01'
@@ -21,8 +21,15 @@ Feature:
     And I select Type of Tour 'Single'
     And I select How did you hear about us 'Google'
     And I select I Agree to Angle Terms of Service
+    And I click on 'Continue'
+#    And I insert a Name on Card 'Tester01'
+    And I insert the Card Number '4242424242424242'
+#    And I insert the Exp Date '05/25'
+#    And I insert the CVV '4545'
 #    And I click on 'Continue'
-#    And Select a photographer
+#    And I click on 'Purchase'
+
+
 
 
 
