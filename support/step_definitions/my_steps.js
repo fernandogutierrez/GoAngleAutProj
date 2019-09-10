@@ -24,6 +24,7 @@ Given(/^I select photographer '(.*)'$/,(photographer) => {
 
 Given(/^I click on '(.*)'$/,(btnName) => {
     let buttonXpath = `//button/descendant::*[text()='${btnName}']`;
+    browser.pause(1500);
     $(buttonXpath).waitForDisplayed(defTimeout);
     $(buttonXpath).waitForExist(defTimeout);
     $(buttonXpath).waitForEnabled(defTimeout);
@@ -56,9 +57,10 @@ Given(/^I insert Last Name '(.*)'$/,(lastName) => {
 });
 
 Given(/^I select Type of Tour '(.*)'$/,(typeTour) => {
-    browser.pause(5000);
+    browser.pause(1000);
     let typeTourXpath = `//span[text()='${typeTour}']/ancestor::label`;
     $(typeTourXpath).waitForExist(defTimeout);
+    $(typeTourXpath).waitForDisplayed(defTimeout);
     $(typeTourXpath).click();
 });
 
@@ -80,17 +82,16 @@ Given(/^I insert a Name on Card '(.*)'$/,(nameOnCard) => {
 
 Given(/^I insert the Card Number '(.*)'$/,(cardNumber) => {
     let cardNumberXPath = `//label[text()='Card Number']/following-sibling::div[contains(@class,'StripeElement')]/div`;
+    browser.execute("window.scrollBy(0, 500)", "");
+    browser.pause(1000);
     $(cardNumberXPath).waitForExist(defTimeout);
-    $(cardNumberXPath).doubleClick();
-    cardNumber.split("").forEach((cardChar)=>{ browser.keys(cardChar) });
-
     $(cardNumberXPath).click();
     cardNumber.split("").forEach((cardChar)=>{ browser.keys(cardChar) });
-    browser.pause(15000);
 });
 
 Given(/^I insert the Exp Date '(.*)'$/,(expDate) => {
     let expDateXPath = `//label[text()='Exp Date']/following-sibling::div[contains(@class,'StripeElement')]`;
+    browser.pause(1000);
     $(expDateXPath).waitForExist(defTimeout);
     $(expDateXPath).click();
     expDate.split("").forEach((eDateChar)=>{browser.keys(eDateChar)})
@@ -98,6 +99,7 @@ Given(/^I insert the Exp Date '(.*)'$/,(expDate) => {
 
 Given(/^I insert the CVV '(.*)'$/,(cvv) => {
     let cvvXPath = `//label[text()='Exp Date']/following-sibling::div[contains(@class,'StripeElement')]`;
+    browser.pause(1000);
     $(cvvXPath).waitForExist(defTimeout);
     $(cvvXPath).click();
     cvv.split("").forEach((cvvChar)=>{browser.keys(cvvChar)})
